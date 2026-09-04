@@ -4,51 +4,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Binay Kumar Singh | Computer Vision PhD Researcher</title>
-    <!-- Bootstrap 5 & FontAwesome CDN -->
+    <!-- Bootstrap 5 CSS -->
     <link href="https://jsdelivr.net" rel="stylesheet">
+    <!-- FontAwesome for Academic Icons -->
     <link rel="stylesheet" href="https://cloudflare.com">
+    
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #fafafa; color: #2b2b2b; line-height: 1.6; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            color: #2c3e50;
+            background-color: #fafafa;
+            line-height: 1.6;
+        }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
         .sidebar { position: sticky; top: 3rem; }
-        .profile-img { width: 100%; max-width: 220px; border-radius: 12px; border: 1px solid #dee2e6; }
-        .section-heading { font-weight: 700; border-bottom: 2px solid #eaeaea; padding-bottom: 0.5rem; margin: 3rem 0 1.5rem; text-transform: uppercase; font-size: 0.95rem; color: #555; }
-        .paper-card { background: #fff; border: 1px solid #e9e9e9; border-radius: 8px; padding: 1.25rem; margin-bottom: 1.5rem; }
-        .skills-tag { background: #eef1f6; padding: 4px 10px; border-radius: 20px; font-size: 0.85rem; display: inline-block; margin: 2px; color: #4f5d73; }
+        .profile-img { width: 100%; max-width: 210px; border-radius: 50%; border: 3px solid #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
+        .section-heading { font-weight: 700; border-bottom: 2px solid #eaeaea; padding-bottom: 0.4rem; margin-top: 3rem; margin-bottom: 1.5rem; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; color: #555; }
+        .nav-link { color: #666; font-weight: 500; padding: 0.25rem 0; font-size: 0.95rem; }
+        .nav-link:hover { color: #000; }
+        .social-icons a { font-size: 1.4rem; color: #7f8c8d; margin-right: 14px; transition: color 0.2s; }
+        .social-icons a:hover { color: #000; }
+        
+        /* Computer Vision Paper Card Custom Layout */
+        .paper-card { background: #fff; border: 1px solid #eef0f2; border-radius: 10px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 5px rgba(0,0,0,0.01); transition: transform 0.2s, box-shadow 0.2s; }
+        .paper-card:hover { transform: translateY(-2px); box-shadow: 0 6px 15px rgba(0,0,0,0.04); }
+        .teaser-box { background: #fdfdfd; border: 1px solid #f0f0f0; border-radius: 6px; display: flex; align-items: center; justify-content: center; min-height: 110px; font-weight: 500; font-size: 0.8rem; color: #999; text-transform: uppercase; letter-spacing: 0.5px; }
+        .paper-title { font-size: 1.1rem; font-weight: 600; color: #111; margin-bottom: 0.3rem; }
+        .author-list { font-size: 0.95rem; color: #4b5563; margin-bottom: 0.3rem; }
+        .me-bold { font-weight: 700; color: #000; text-decoration: underline; }
+        .venue { font-style: italic; color: #c64415; font-weight: 500; font-size: 0.95rem; }
+        
+        /* Action Badges */
+        .pub-badges .badge { font-weight: 500; padding: 0.4rem 0.6rem; font-size: 0.8rem; border-radius: 5px; text-decoration: none; margin-right: 6px; display: inline-flex; align-items: center; }
+        .badge-paper { background-color: #f0f6ff; color: #0066cc; border: 1px solid #ddeaff; }
+        .badge-code { background-color: #f0fdf4; color: #15803d; border: 1px solid #dcfce7; }
+        .badge-project { background-color: #fff7ed; color: #c2410c; border: 1px solid #ffedd5; }
+        
+        .news-item { font-size: 0.95rem; margin-bottom: 0.75rem; }
+        .news-date { font-weight: 700; color: #475569; min-width: 85px; display: inline-block; }
+        .skills-tag { background: #f1f5f9; padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; display: inline-block; margin: 3px; color: #334155; font-weight: 500; }
     </style>
 </head>
 <body>
-<div class="container my-5 pt-3">
+
+<div class="container my-5 pt-2">
     <div class="row gx-5">
-        <div class="col-md-3 mb-5 text-center text-md-start">
-            <img src="https://placeholder.com" class="profile-img mb-4" alt="Binay Kumar Singh">
-            <h3 class="fw-bold mb-1">Binay Kumar Singh</h3>
-            <p class="text-muted mb-3">Computer Vision PhD Researcher</p>
-            <div class="social-icons mb-4">
-                <a href="mailto:binay.singh@ucf.edu"><i class="fas fa-envelope"></i></a>
-                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://scholar.google.com/citations?user=-YmX2NIAAAAJ" target="_blank"><i class="fas fa-graduation-cap"></i></a>
-                <a href="https://www.linkedin.com/in/binay-kumar-singh/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        
+        <!-- ================= SIDEBAR ================= -->
+        <div class="col-md-3 mb-5">
+            <div class="sidebar text-center text-md-start">
+                <img src="https://placeholder.com" class="profile-img mb-4" alt="Binay Kumar Singh">
+                
+                <h3 class="fw-bold mb-1">Binay Kumar Singh</h3>
+                <p class="text-muted mb-3" style="font-size: 0.95rem;">PhD Researcher at CRCV Lab, UCF</p>
+                
+                <div class="social-icons mb-4">
+                    <a href="mailto:binay.singh@ucf.edu" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://github.com" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://google.com" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                    <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+
+                <nav class="nav flex-column d-none d-md-flex mb-4">
+                    <a class="nav-link" href="#about">About Me</a>
+                    <a class="nav-link" href="#news">News</a>
+                    <a class="nav-link" href="#publications">Publications</a>
+                    <a class="nav-link" href="#service">Professional Service</a>
+                </nav>
+                
+                <div class="text-muted small border-top pt-3 d-none d-md-block" style="font-size:0.85rem;">
+                    <strong>Center for Research in Computer Vision</strong><br>
+                    University of Central Florida<br>
+                    Orlando, FL
+                </div>
             </div>
         </div>
+
+        <!-- ================= MAIN CONTENT ================= -->
         <div class="col-md-9">
+            
+            <!-- Bio Section -->
             <section id="about" class="mb-4">
-                <p class="lead">PhD Candidate at the <strong>CRCV Lab</strong>, <strong>University of Central Florida (UCF)</strong> under Dr. Niels Da Vitoria Lobo.</p>
-                <p>Specializing in Computer Vision, Deep Learning, robust object detection, and context-centric feature fusion.</p>
+                <h1 class="display-6 fw-bold d-md-none mb-3">Binay Kumar Singh</h1>
+                <p class="lead">I am a Graduate Research Assistant and PhD Candidate at the <strong>Center for Research in Computer Vision (CRCV) Lab</strong> at the <strong>University of Central Florida (UCF)</strong>, working under the supervision of <strong>Dr. Niels Da Vitoria Lobo</strong>.</p>
+                <p>My core research lives at the intersection of deep learning and computer vision architectures, with a hyper-focus on designing next-generation systems for robust real-time object detection, contextual feature-fusion pipelines, and semi-supervised representation learning models.</p>
             </section>
+
+            <!-- News Section -->
+            <section id="news">
+                <div class="section-heading">News</div>
+                <div class="news-item"><span class="news-date">May 2026</span> 📄 Our work on "Context-Aware Feature-Fusion" was presented at <strong>Precognition 2026</strong>!</div>
+                <div class="news-item"><span class="news-date">Sep 2024</span> 🚀 Our paper introducing **SDLNet** was officially published!</div>
+                <div class="news-item"><span class="news-date">Apr 2024</span> 🎓 Joined the Department of Computer Science at University of Central Florida to pursue my PhD.</div>
+            </section>
+
+            <!-- Publications Section -->
             <section id="publications">
                 <div class="section-heading">Research & Publications</div>
+                
+                <!-- PAPER CARD 1 -->
                 <div class="paper-card">
-                    <h5>Context-Aware Feature-Fusion for Co-occurring Object Detection</h5>
-                    <p class="mb-1"><strong>Binay Kumar Singh</strong>, Niels Da Vitoria Lobo</p>
-                    <p class="text-muted small">arXiv Preprint, 2026</p>
+                    <div class="row align-items-center">
+                        <div class="col-sm-3 mb-3 mb-sm-0">
+                            <div class="teaser-box">Context Fusion</div>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="paper-title">Contextually Enhanced Unknown Aware Contrastive Learning based Co-occurring Object Detection</div>
+                            <div class="author-list">
+                                <span class="me-bold">Binay Kumar Singh</span>, Niels Da Vitoria Lobo
+                            </div>
+                            <div class="venue mb-2">IEEE Access / OpenReview Framework</div>
+                            <div class="pub-badges">
+                                <a href="https://openreview.net/revisions?id=hU9aKDuKOr" target="_blank" class="badge badge-paper"><i class="far fa-file-pdf me-1"></i> Publisher Page</a>
+                                <a href="https://github.com" target="_blank" class="badge badge-code"><i class="fab fa-github me-1"></i> Code Repository</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </section>
-            <section id="skills">
-                <div class="section-heading">Core Expertise</div>
-                <span class="skills-tag">PyTorch</span> <span class="skills-tag">TensorFlow</span> <span class="skills-tag">Object Detection</span>
-            </section>
-        </div>
-    </div>
-</div>
-</body>
-</html>
+
+                <!-- PAPER CARD 2 -->
+                <div class="paper-card">
+                    <div class="row align-items-center">
+                        <div class="col-sm-3 mb-3 mb-sm-0">
+                            <div class="teaser-box">SDLNet Graph</div>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="paper-title">SDLNet: Statistical Deep Learning Network for Co-Occurring Object Detection and Identification</div>
+                            <div class="author-list">
+                                <span class="me-bold">Binay Kumar Singh</span>, Niels Da Vitoria Lobo
+                            </div>
+                            <div class="venue mb-2">Association for Computing Machinery (ACM Digital Library)</div>
+                            <div class="pub-badges">
+                                <a href="https://dl.acm.org/doi/10.1145/3674029.3674055" target="_blank" class="badge badge-paper"><i class="fas fa-link me-1"></i> ACM DOI</a>
+                                <a href="https://openreview.net/revisions?id=crxIfeMlwZ" target="_blank" class="badge badge-project"><i class="fas fa-graduation-cap"></i> OpenReview</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PAPER CARD 3 -->
+                <div class="paper-card">
+                    <div class="row align-items-center">
+                        <div class="col-sm-3 mb-3 mb-sm-0">
