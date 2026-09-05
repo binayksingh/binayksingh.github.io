@@ -1,227 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Binay Kumar Singh | Computer Vision PhD Researcher</title>
-    
-    <!-- Bootstrap 5 CDN -->
-    <link href="https://jsdelivr.net" rel="stylesheet">
-    
-    <!-- FontAwesome 6 for Icons -->
-    <link rel="stylesheet" href="https://cloudflare.com">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Binay Kumar Singh | PhD Researcher, Computer Vision</title>
+<meta name="description" content="Binay Kumar Singh is a PhD researcher at the University of Central Florida working on object detection, feature fusion, and semi-supervised representation learning.">
 
-    <style>
-        body {
-            font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-            color: #444;
-            background-color: #ffffff;
-            line-height: 1.5;
-        }
-        a {
-            color: #1772d2;
-            text-decoration: none;
-            transition: color 0.1s ease-in-out;
-        }
-        a:hover {
-            color: #f09228;
-        }
-        .sidebar {
-            position: sticky;
-            top: 2rem;
-        }
-        .profile-img {
-            width: 100%;
-            max-width: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-        .section-heading {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #222;
-            margin-top: 2.5rem;
-            margin-bottom: 1.2rem;
-        }
-        .nav-link {
-            color: #1772d2;
-            font-weight: 400;
-            padding: 0.2rem 0;
-            font-size: 0.95rem;
-        }
-        .social-icons a {
-            font-size: 1.2rem;
-            color: #1772d2;
-            margin-right: 10px;
-        }
-        /* Jon Barron Style Publication Layout */
-        .publication-table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0 1.5rem;
-        }
-        .teaser-cell {
-            width: 25%;
-            vertical-align: middle;
-            padding-right: 1rem;
-        }
-        .content-cell {
-            width: 75%;
-            vertical-align: middle;
-        }
-        .teaser-box {
-            background: #fafafa;
-            border: 1px dashed #ddd;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 110px;
-            font-weight: 600;
-            font-size: 0.8rem;
-            color: #777;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .paper-title {
-            font-size: 1rem;
-            font-weight: 700;
-            color: #222;
-            margin-bottom: 0.2rem;
-        }
-        .author-list {
-            font-size: 0.9rem;
-            color: #555;
-            margin-bottom: 0.2rem;
-        }
-        .me-bold {
-            font-weight: 700;
-            color: #222;
-        }
-        .venue {
-            font-style: italic;
-            color: #555;
-            font-size: 0.9rem;
-            margin-bottom: 0.4rem;
-        }
-        .pub-links {
-            font-size: 0.9rem;
-        }
-        .pub-links a {
-            margin-right: 8px;
-        }
-        .news-item {
-            font-size: 0.95rem;
-            margin-bottom: 0.6rem;
-        }
-        .news-date {
-            font-weight: 700;
-            color: #222;
-            margin-right: 10px;
-        }
-        footer {
-            font-size: 0.85rem;
-            color: #777;
-            margin-top: 5rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid #eee;
-        }
-    </style>
+<style>
+  :root {
+    --text: #222;
+    --muted: #555;
+    --faint: #888;
+    --rule: #e4e4e4;
+    --link: #1a5fb4;
+    --link-hover: #d9631e;
+    --bg: #fdfdfc;
+    --serif: Georgia, "Times New Roman", Times, serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 4rem 1.5rem 6rem; }
+
+  nav.top {
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    margin-bottom: 3rem;
+  }
+  nav.top a {
+    color: var(--muted);
+    text-decoration: none;
+    margin-right: 1.4rem;
+  }
+  nav.top a:hover { color: var(--link-hover); }
+
+  header.hero {
+    display: grid;
+    grid-template-columns: 1fr 150px;
+    gap: 2.5rem;
+    align-items: start;
+    margin-bottom: 2.8rem;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-size: 2.1rem;
+    font-weight: 400;
+    margin: 0 0 1rem;
+    letter-spacing: 0.2px;
+  }
+  header.hero p { margin: 0 0 1rem; color: var(--text); }
+  header.hero .email {
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+  .photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 4px;
+    object-fit: cover;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    color: var(--faint);
+    text-align: center;
+    padding: 0.5rem;
+    border: 1px dashed #ccc;
+  }
+
+  .links-row {
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    margin: 1.2rem 0 0;
+  }
+  .links-row a {
+    color: var(--link);
+    text-decoration: none;
+    margin-right: 1.2rem;
+  }
+  .links-row a:hover { color: var(--link-hover); }
+
+  h2.section {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    font-weight: 600;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 0.5rem;
+    margin: 3rem 0 1.4rem;
+  }
+
+  /* Updates */
+  .update-year {
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--text);
+    margin: 1.4rem 0 0.6rem;
+  }
+  .update-item {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.95rem;
+    margin-bottom: 0.55rem;
+  }
+  .update-date {
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    color: var(--faint);
+    min-width: 55px;
+    padding-top: 0.15rem;
+    flex-shrink: 0;
+  }
+  .update-item a { color: var(--link); text-decoration: none; }
+  .update-item a:hover { color: var(--link-hover); }
+
+  /* Publications */
+  .pub {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2.2rem;
+    align-items: start;
+  }
+  .pub-teaser {
+    width: 150px;
+    height: 100px;
+    background: #f4f4f2;
+    border: 1px dashed #ccc;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    color: var(--faint);
+    text-align: center;
+    padding: 0.4rem;
+  }
+  .pub-title {
+    font-size: 1.02rem;
+    font-weight: 700;
+    margin: 0 0 0.3rem;
+  }
+  .pub-title a { color: var(--text); text-decoration: none; }
+  .pub-title a:hover { color: var(--link-hover); }
+  .pub-authors {
+    font-size: 0.92rem;
+    color: var(--muted);
+    margin-bottom: 0.25rem;
+  }
+  .pub-authors .me { color: var(--text); font-weight: 700; }
+  .pub-venue {
+    font-family: var(--sans);
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 0.4rem;
+  }
+  .pub-links {
+    font-family: var(--sans);
+    font-size: 0.85rem;
+  }
+  .pub-links a {
+    color: var(--link);
+    text-decoration: none;
+    margin-right: 0.9rem;
+  }
+  .pub-links a:hover { color: var(--link-hover); }
+
+  footer {
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    color: var(--faint);
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+  }
+  footer a { color: var(--faint); }
+
+  @media (max-width: 600px) {
+    header.hero { grid-template-columns: 1fr; }
+    .photo { width: 110px; height: 110px; order: -1; }
+    .pub { grid-template-columns: 1fr; }
+    .pub-teaser { width: 100%; }
+  }
+</style>
 </head>
 <body>
+<div class="wrap">
 
-<div class="container my-5 xl-max-width" style="max-width: 960px;">
-    <div class="row gx-5">
-        
-        <!-- ================= SIDEBAR ================= -->
-        <div class="col-md-3 mb-5">
-            <div class="sidebar text-center text-md-start">
-                <!-- FIXED: Active profile photo URL -->
-                <img src="https://githubusercontent.com" class="profile-img mb-4" alt="Binay Kumar Singh">
-                
-                <h3 class="fw-bold mb-1" style="font-size: 1.6rem; color: #222;">Binay Kumar Singh</h3>
-                <p class="text-muted mb-3" style="font-size: 0.9rem;">PhD Researcher at Department of Computer Science, UCF</p>
-                
-                <div class="social-icons mb-4">
-                    <a href="mailto:binay.singh@ucf.edu" title="Email"><i class="fas fa-envelope"></i></a>
-                    <a href="https://github.com" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://google.com" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                    <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                </div>
-                
-                <nav class="nav flex-column mb-4">
-                    <a class="nav-link" href="#about">About Me</a>
-                    <a class="nav-link" href="#news">News</a>
-                    <a class="nav-link" href="#publications">Publications</a>
-                </nav>
-                
-                <div class="text-muted small" style="font-size:0.8rem; line-height: 1.4;">
-                    Department of Computer Science<br>
-                    University of Central Florida<br>
-                    Orlando, FL
-                </div>
-            </div>
-        </div>
+  <nav class="top">
+    <a href="#about">About</a>
+    <a href="#updates">Updates</a>
+    <a href="#publications">Publications</a>
+  </nav>
 
-        <!-- ================= MAIN CONTENT ================= -->
-        <div class="col-md-9">
-            
-            <!-- Bio Section -->
-            <section id="about" class="mb-4">
-                <p>I am a PhD Candidate at the <strong>University of Central Florida (UCF)</strong>, working under the supervision of <strong>Dr. Niels Da Vitoria Lobo</strong>.</p>
-                <p>My core research lives at the intersection of deep learning and computer vision architectures, with a hyper-focus on designing next-generation systems for robust real-time object detection, contextual feature-fusion pipelines, and semi-supervised representation learning models.</p>
-            </section>
+  <header class="hero" id="about">
+    <div>
+      <h1>Binay Kumar Singh</h1>
+      <p>I am a PhD candidate in the Department of Computer Science at the <strong>University of Central Florida (UCF)</strong>, advised by <strong>Dr. Niels Da Vitoria Lobo</strong>.</p>
+      <p>My research sits at the intersection of deep learning and computer vision, focused on robust real-time object detection, contextual feature-fusion pipelines, and semi-supervised representation learning.</p>
+      <p class="email">Email: binay.singh [at] ucf.edu</p>
+      <div class="links-row">
+        <a href="#">Google Scholar</a>
+        <a href="#">GitHub</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">CV</a>
+      </div>
+    </div>
+    <div class="photo">your photo here</div>
+  </header>
 
-            <!-- News Section -->
-            <section id="news">
-                <div class="section-heading">News</div>
-                <div class="news-item"><span class="news-date">May 2026</span> 📄 Our work on "Context-Aware Feature-Fusion" was presented at <strong>Precognition 2026</strong>!</div>
-                <div class="news-item"><span class="news-date">Sep 2024</span> 🚀 Our paper introducing <strong>SDLNet</strong> was officially published!</div>
-                <div class="news-item"><span class="news-date">Apr 2024</span> 🎓 Joined the Department of Computer Science at University of Central Florida to pursue my PhD.</div>
-            </section>
+  <section id="updates">
+    <h2 class="section">Updates</h2>
 
-            <!-- Publications Section -->
-            <section id="publications">
-                <div class="section-heading">Research & Publications</div>
-                <table class="publication-table">
-                    
-                    <!-- PAPER 1 -->
-                    <tr>
-                        <td class="teaser-cell">
-                            <div class="teaser-box">Context Fusion</div>
-                        </td>
-                        <td class="content-cell">
-                            <div class="paper-title"><a href="https://openreview.net" target="_blank">Contextually Enhanced Unknown Aware Contrastive Learning based Co-occurring Object Detection</a></div>
-                            <div class="author-list"><span class="me-bold">Binay Kumar Singh</span>, Niels Da Vitoria Lobo</div>
-                            <div class="venue">IEEE Access / OpenReview Framework</div>
-                            <div class="pub-links">
-                                <a href="https://openreview.net" target="_blank">publisher page</a> / 
-                                <a href="https://github.com" target="_blank">code</a>
-                            </div>
-                        </td>
-                    </tr>
+    <div class="update-year">2026</div>
+    <div class="update-item">
+      <span class="update-date">May</span>
+      <span>Our work on <strong>Context-Aware Feature-Fusion for Real-Time Object Recognition</strong> was presented at <strong>Precognition 2026</strong>.</span>
+    </div>
 
-                    <!-- PAPER 2 -->
-                    <tr>
-                        <td class="teaser-cell">
-                            <div class="teaser-box">SDLNet Graph</div>
-                        </td>
-                        <td class="content-cell">
-                            <div class="paper-title"><a href="https://acm.org" target="_blank">SDLNet: Statistical Deep Learning Network for Co-Occurring Object Detection and Identification</a></div>
-                            <div class="author-list"><span class="me-bold">Binay Kumar Singh</span>, Niels Da Vitoria Lobo</div>
-                            <div class="venue">ACM Digital Library (ICMLT 2024)</div>
-                            <div class="pub-links">
-                                <a href="https://acm.org" target="_blank">acm doi</a> / 
-                                <a href="https://openreview.net" target="_blank">openreview</a>
-                            </div>
-                        </td>
-                    </tr>
+    <div class="update-year">2024</div>
+    <div class="update-item">
+      <span class="update-date">Sep</span>
+      <span>Our paper introducing <strong>SDLNet</strong> was published in the ACM Digital Library.</span>
+    </div>
+    <div class="update-item">
+      <span class="update-date">Apr</span>
+      <span>Joined the Department of Computer Science at the University of Central Florida to pursue my PhD.</span>
+    </div>
+  </section>
 
-                    <!-- FIXED: Completed Paper Card 3 -->
-                    <tr>
-                        <td class="teaser-cell">
-                            <div class="teaser-box">Feature Fusion</div>
-                        </td>
-                        <td class="content-cell">
-                            <div class="paper-title"><a href="#" onclick="return false;">Context-Aware Feature-Fusion for Real-Time Object Recognition</a></div>
-                            <div class="author-list"><span class="me-bold">Binay Kumar Singh</span>, Niels Da Vitoria Lobo</div>
+  <section id="publications">
+    <h2 class="section">Publications</h2>
+
+    <div class="pub">
+      <div class="pub-teaser">Feature Fusion</div>
+      <div>
+        <div class="pub-title"><a href="https://arxiv.org/abs/2606.12628" target="_blank">Context-Aware Feature-Fusion for Co-occurring Object Detection in Autonomous Driving</a></div>
+        <div class="pub-authors"><span class="me">Binay Kumar Singh</span>, Niels Da Vitoria Lobo</div>
+        <div class="pub-venue">arXiv preprint arXiv:2606.12628, 2026 &middot; presented at Precognition Workshop, CVPR 2026</div>
+        <div class="pub-links"><a href="https://arxiv.org/abs/2606.12628" target="_blank">arXiv</a></div>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-teaser">Context Fusion</div>
+      <div>
+        <div class="pub-title"><a href="http://dx.doi.org/10.1109/ACCESS.2026.3718368" target="_blank">Contextually Enhanced Unknown Aware Contrastive Learning Based Co-occurring Object Detection</a></div>
+        <div class="pub-authors"><span class="me">Binay Kumar Singh</span>, Niels Da Vitoria Lobo</div>
+        <div class="pub-venue">IEEE Access, 2026</div>
+        <div class="pub-links"><a href="http://dx.doi.org/10.1109/ACCESS.2026.3718368" target="_blank">doi</a></div>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-teaser">SDLNet</div>
+      <div>
+        <div class="pub-title"><a href="http://dx.doi.org/10.1145/3674029.3674055" target="_blank">SDLNet: Statistical Deep Learning Network for Co-Occurring Object Detection and Identification</a></div>
+        <div class="pub-authors"><span class="me">Binay Kumar Singh</span>, Niels Da Vitoria Lobo</div>
+        <div class="pub-venue">9th International Conference on Machine Learning Technologies (ICMLT), ACM, 2024, pp. 158&ndash;162</div>
+        <div class="pub-links"><a href="http://dx.doi.org/10.1145/3674029.3674055" target="_blank">doi</a></div>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-teaser">Image Encryption</div>
+      <div>
+        <div class="pub-title"><a href="https://doi.org/10.1007/978-981-15-1157-8_20" target="_blank">Multispectral Bayer Color Image Encryption</a></div>
+        <div class="pub-authors"><span class="me">Binay Kumar Singh</span>, Jagat Singh</div>
+        <div class="pub-venue">Mathematical Analysis II: Optimisation, Differential Equations and Graph Theory (ICRAPAM 2018), Springer Proceedings in Mathematics &amp; Statistics, vol. 307, Springer, 2020</div>
+        <div class="pub-links"><a href="https://doi.org/10.1007/978-981-15-1157-8_20" target="_blank">doi</a></div>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-teaser">Data Encryption</div>
+      <div>
+        <div class="pub-title">Probabilistic Data Encryption using Elliptic Curve Cryptography and Arnold Transformation</div>
+        <div class="pub-authors"><span class="me">Binay Kumar Singh</span>, Abusha Tsegaye, Jagat Singh</div>
+        <div class="pub-venue">International Conference on I-SMAC (IoT in Social, Mobile, Analytics and Cloud), 2017</div>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-teaser">RSA Encryption</div>
+      <div>
+        <div class="pub-title"><a href="http://dx.doi.org/10.5120/20116-2166" target="_blank">Grid-based Image Encryption using RSA</a></div>
+        <div class="pub-authors"><span class="me">Binay Kumar Singh</span>, Sudhir Kumar Gupta</div>
+        <div class="pub-venue">International Journal of Computer Applications, vol. 115, no. 1, 2015, pp. 26&ndash;29</div>
+        <div class="pub-links"><a href="http://dx.doi.org/10.5120/20116-2166" target="_blank">doi</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Department of Computer Science, University of Central Florida, Orlando, FL
+  </footer>
+
+</div>
+</body>
+</html>
