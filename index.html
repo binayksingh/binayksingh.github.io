@@ -33,13 +33,27 @@
     font-family: var(--sans);
     font-size: 0.85rem;
     margin-bottom: 3rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
   }
   nav.top a {
     color: var(--muted);
     text-decoration: none;
-    margin-right: 1.4rem;
+    background: #f2f2f0;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    transition: background 0.12s ease, color 0.12s ease;
   }
-  nav.top a:hover { color: var(--link-hover); }
+  nav.top a:hover {
+    background: #e4edf9;
+    color: var(--link);
+  }
+  nav.top a:active,
+  nav.top a:focus-visible {
+    background: var(--link);
+    color: #fff;
+  }
 
   header.hero {
     display: grid;
@@ -82,12 +96,10 @@
   .links-row a:hover { color: var(--link-hover); }
 
   h2.section {
-    font-family: var(--sans);
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--muted);
-    font-weight: 600;
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text);
     border-bottom: 1px solid var(--rule);
     padding-bottom: 0.5rem;
     margin: 3rem 0 1.4rem;
@@ -129,8 +141,7 @@
   .pub-teaser {
     width: 150px;
     height: 100px;
-    background: #f4f4f2;
-    border: 1px dashed #ccc;
+    background: #f2f2f0;
     border-radius: 3px;
     display: flex;
     align-items: center;
